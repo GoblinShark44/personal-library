@@ -10,7 +10,7 @@
 import { combineReducers } from 'redux';
 
 // import ALL reducers here:
-import testReducer from './testReducer';
+import usersReducer from './usersReducer';
 
 /**
  * Gather properties from each reducer and
@@ -22,7 +22,7 @@ import testReducer from './testReducer';
  * state.bucketName.propertiesAddedByReducer
  */
 const reducers = combineReducers({
-  test: testReducer,
+  user: usersReducer,
 });
 
 /**

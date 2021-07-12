@@ -37,7 +37,11 @@ export const updateTestString_ActionCreator = (newStringVal) => ({
 });
 
 // ================================== //
-// OTHER action creators...
+// BOOKMARKS action creators...
 // ---------------------------------- //
 
-// future home of actions belonging to other reducers
+// GET_BOOKMARKS action creator
+export const getBookmarks_ActionCreator = (user_id) => ({
+  type: types_enum.GET_BOOKMARKS,
+  payload: user_id,
+});
