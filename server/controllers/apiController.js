@@ -40,6 +40,27 @@ apiController.getCategories = (req, res, next) => {
 };
 
 
+apiController.getAllCategories = (req, res, next) => {
+
+  // const userId = req.body.user_id;
+  
+  console.log("Req result:", req.body)
+
+  const sqlQuery = {
+    text: `SELECT * FROM categories`
+  };
+
+  //console.log("SQL QUERY ", sqlQuery);
+  db.query(sqlQuery)
+    .then(data => {
+      console.log("SQL DATA ", data);
+      res.locals.categories = data.rows;
+      return next();
+    })
+    .catch(err => { return next(err) });
+};
+
+
 apiController.getBookmarks = (req, res, next) => {
 
   const userId = req.body.user_id;;

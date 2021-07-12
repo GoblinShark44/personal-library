@@ -41,7 +41,7 @@ const mapDispatchToProps = (dispatch) => {
     // create functions that will dispatch action creators
     return {
         getBookmarks: (user) => {
-            dispatch(actions.get(user));
+            dispatch(actions.getBookmarks_ActionCreator(user));
         },
     }
 };
